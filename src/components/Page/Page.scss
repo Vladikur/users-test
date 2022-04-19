@@ -1,0 +1,30 @@
+$font: 'Roboto', 'Arial', sans-serif;
+
+.page {
+  display: flex;
+  min-height: 1028px;
+  width: 665px;
+  margin: 0 auto 0 auto;
+}
+
+.page__sort-container {
+  box-sizing: border-box;
+  padding: 35px 0 0 20px;
+  width: 152px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #BDBDBD;
+}
+
+.page__sort-text {
+  font-family: $font;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.page__content-container {
+  width: 513px;
+}

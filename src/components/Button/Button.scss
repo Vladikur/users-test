@@ -1,0 +1,19 @@
+$font: 'Roboto', 'Arial', sans-serif;
+
+.button {
+  margin: 10px 0 0 0;
+  background: #4B51EF;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border: none;
+  font-family: $font;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  transition: opacity 0.1s linear 0.1s;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+}
