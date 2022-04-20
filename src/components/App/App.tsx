@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
-import './App.scss';
+import './App.module.scss';
 import UsersPage from '../UsersPage/UsersPage';
 import UserPage from '../UserPage/UserPage';
 

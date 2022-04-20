@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IUser } from '../../types/types';
-import './Card.scss';
+import styles from './Card.module.scss';
 
 interface CardProps {
   user: IUser;
@@ -10,17 +10,17 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ user, more }) => {
   return (
-    <div className='card'>
-      <p className='card__info'>
-        <span className='card__info_name_string'>ФИO: </span> {user.name}
+    <div className={styles.card}>
+      <p className={styles.info}>
+        <span className={styles.infoName}>ФИO: </span> {user.name}
       </p>
-      <p className='card__info'>
-        <span className='card__info_name_string'>город: </span> {user.address.city}
+      <p className={styles.info}>
+        <span className={styles.infoName}>город: </span> {user.address.city}
       </p>
-      <p className='card__info'>
-        <span className='card__info_name_string'>компания: </span> {user.company.name}
+      <p className={styles.info}>
+        <span className={styles.infoName}>компания: </span> {user.company.name}
       </p>
-      <button onClick={() => more(user)} className='card__more'>Подробнее</button>
+      <button onClick={() => more(user)} className={styles.more}>Подробнее</button>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { IUser, IValues } from '../../types/types';
 import InputElement from '../InputElement/InputElement';
-import './Form.scss';
+import styles from './Form.module.scss';
 
 interface FormProps {
   thisUser: IUser;
@@ -79,7 +79,7 @@ const Form: FC<FormProps> = ({ thisUser, isRedact }) => {
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit} noValidate>
+    <form className={styles.form} onSubmit={handleSubmit} noValidate>
       <InputElement inputName='Name' isRedact={isRedact} name='name' inputValue={inputsValue.name} handleChange={handleChange}/>
       <InputElement inputName='User name' isRedact={isRedact} name='username' inputValue={inputsValue.username} handleChange={handleChange}/>
       <InputElement inputName='E-mail' isRedact={isRedact} name='email' inputValue={inputsValue.email} handleChange={handleChange}/>
@@ -88,9 +88,9 @@ const Form: FC<FormProps> = ({ thisUser, isRedact }) => {
       <InputElement inputName='Zip code' isRedact={isRedact} name='zipcode' inputValue={inputsValue.zipcode} handleChange={handleChange}/>
       <InputElement inputName='Phone' isRedact={isRedact} name='phone' inputValue={inputsValue.phone} handleChange={handleChange}/>
       <InputElement inputName='Website' isRedact={isRedact} name='website' inputValue={inputsValue.website} handleChange={handleChange}/>
-      <span className="form__input-name">Comment</span>
-      <textarea disabled={!isRedact} value={inputsValue.comment || ''} onChange={handleChange} name="comment" className='form__text-area'></textarea>
-      <button disabled={!isValid} className="form__submit" type="submit" >Отправить</button>
+      <span className={styles.inputName}>Comment</span>
+      <textarea disabled={!isRedact} value={inputsValue.comment || ''} onChange={handleChange} name="comment" className={styles.textArea}></textarea>
+      <button disabled={!isValid} className={styles.submit} type="submit" >Отправить</button>
     </form>
   );
 }

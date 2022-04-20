@@ -7,7 +7,7 @@ $font: 'Roboto', 'Arial', sans-serif;
   margin: 0 auto 0 auto;
 }
 
-.page__sort-container {
+.sortContainer {
   box-sizing: border-box;
   padding: 35px 0 0 20px;
   width: 152px;
@@ -18,13 +18,13 @@ $font: 'Roboto', 'Arial', sans-serif;
   background: #BDBDBD;
 }
 
-.page__sort-text {
+.sortText {
   font-family: $font;
   font-size: 12px;
   line-height: 14px;
   color: #000000;
 }
 
-.page__content-container {
+.contentContainer {
   width: 513px;
 }

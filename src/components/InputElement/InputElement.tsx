@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './InputElement.scss';
+import styles from './InputElement.module.scss';
 
 interface InputElementProps {
   inputName: string;
@@ -11,9 +11,9 @@ interface InputElementProps {
 
 const InputElement: FC<InputElementProps> = ({ inputName, isRedact, inputValue, name, handleChange}) => {
   return (
-    <div className="imput">
-      <span className="form__input-name">{inputName}</span>
-      <input disabled={!isRedact} value={inputValue} onChange={(e) => handleChange(e)} type="text" name={name} required className={`form__input ${ inputValue ? '' : 'form__input_type_error'}`}></input>
+    <div className={styles.imputContainer}>
+      <span className={styles.inputName}>{inputName}</span>
+      <input disabled={!isRedact} value={inputValue} onChange={(e) => handleChange(e)} type="text" name={name} required className={inputValue ? styles.input : styles.inputError}></input>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { ReactNode, FC } from 'react';
 import Button from '../Button/Button';
-import './Page.scss';
+import styles from './Page.module.scss';
 
 interface PageProps {
   children: ReactNode;
@@ -10,13 +10,13 @@ interface PageProps {
 
 const Page: FC<PageProps> = ({children, sortCities, sortCompanies}) => {
   return (
-    <div className="page">
-      <div className="page__sort-container">
-        <span className="page__sort-text">Сортировка</span>
+    <div className={styles.page}>
+      <div className={styles.sortContainer}>
+        <span className={styles.sortText}>Сортировка</span>
         <Button onClick={sortCities ? sortCities : () => {}}>по городу</Button>
         <Button onClick={sortCompanies ? sortCompanies : () => {}}>по компании</Button>
       </div>
-      <div className="page__content-container">
+      <div className={styles.contentContainer}>
         {children}
       </div>
     </div>

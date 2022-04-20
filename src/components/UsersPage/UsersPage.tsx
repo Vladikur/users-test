@@ -4,7 +4,7 @@ import Preloader from '../Preloader/Preloader';
 import Page from '../Page/Page';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import './UsersPage.scss';
+import styles from './UsersPage.module.scss';
 import { IUser } from '../../types/types';
 import { sortOnCity, sortOnCompany } from '../../utils/sort';
 
@@ -63,7 +63,7 @@ const UsersPage: FC = () => {
       sortCities={handleCitiesSort}
       sortCompanies={handleCompaniesSort}
     >
-      <h1 className="app__title">Список пользователей</h1>
+      <h1 className={styles.title}>Список пользователей</h1>
       { preloader ? <Preloader/> : ''}
       {users.map((user) => (
         <Card
@@ -72,7 +72,7 @@ const UsersPage: FC = () => {
           more={pushToUser}
         />
       ))}
-      <p className="users-page__count-users">Найдено {users.length} пользователей</p>
+      <p className={styles.countUsers}>Найдено {users.length} пользователей</p>
     </Page>
   );
 }

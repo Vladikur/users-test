@@ -1,7 +1,7 @@
 import { FC, useEffect, useState  } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './UserPage.scss';
+import styles from'./UserPage.module.scss';
 import Page from '../Page/Page';
 import Form from '../Form/Form';
 import Button from '../Button/Button';
@@ -39,8 +39,8 @@ const UserPage: FC = () => {
 
   return (
     <Page>
-      <div className="user-page__header-container">
-        <h1 className="app__title">Профиль пользоваетля</h1>
+      <div className={styles.headerContainer}>
+        <h1 className={styles.title}>Профиль пользоваетля</h1>
         <Button onClick={redactForm} >Редактироввать</Button>
       </div>
       <Form
